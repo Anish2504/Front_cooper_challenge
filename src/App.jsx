@@ -81,6 +81,7 @@ class App extends Component {
 
     return (
       <>
+      <h1>Welcome to Cooper Test</h1>
         <InputFields onChangeHandler={this.onChangeHandler} />
         {renderLogin}
         <DisplayCooperResult
