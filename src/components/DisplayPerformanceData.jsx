@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { getData } from "../modules/performanceData";
-import { Line, Bar, Pie } from "react-chartjs-2";
+import { Line, Bar, Pie, Doughnut } from "react-chartjs-2";
 
 class DisplayPerformanceData extends Component {
   state = {
@@ -61,7 +61,7 @@ class DisplayPerformanceData extends Component {
     }
     const distances = [];
     const labels = [];
-    let dataForPie = {};
+    let dataForDoughnut = {};
 
     if (this.state.performanceData != null) {
       this.state.performanceData.forEach(entry => {
@@ -77,7 +77,7 @@ class DisplayPerformanceData extends Component {
         );
       });
 
-      dataForPie = {
+      dataForDoughnut = {
         labels: justLabels,
         datasets: [
           {
@@ -85,7 +85,7 @@ class DisplayPerformanceData extends Component {
             backgroundColor: [
               "#7CFC00",
               "#00BFFF",
-              "#FFFF00",
+              "#BA55D3",
               "#FFD700",
               "#8B0000"
             ]
@@ -97,8 +97,8 @@ class DisplayPerformanceData extends Component {
     return (
       <div id="index">
         {dataIndex}
-        <Pie
-          data={dataForPie}
+        <Doughnut
+          data={dataForDoughnut}
           width={400}
           height={200}
           options={{ maintainAspectRatio: false }}
