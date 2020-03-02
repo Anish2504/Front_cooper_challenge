@@ -84,10 +84,10 @@ class DisplayPerformanceData extends Component {
             data: dataDistance,
             backgroundColor: [
               "#7CFC00",
-              "#00BFFF",
               "#BA55D3",
-              "#FFD700",
-              "#8B0000"
+              "#8B0000",
+              "#00BFFF",
+              "#FFD700"
             ]
           }
         ]
